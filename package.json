@@ -1,0 +1,56 @@
+{
+  "name": "sofa-mosn-demo",
+  "version": "1.0.0",
+  "description": "mosn test",
+  "private": true,
+  "scripts": {
+    "start": "egg-rpc-generator && egg-scripts start --daemon --title=egg-server-{{name}}",
+    "stop": "egg-scripts stop --title=egg-server-{{name}}",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "proxy": "egg-rpc-generator",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gxcsoccer/sofa-mosn-demo.git"
+  },
+  "keywords": [
+    "mosn",
+    "eggjs"
+  ],
+  "author": "gxcsoccer <gxcsoccer@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gxcsoccer/sofa-mosn-demo/issues"
+  },
+  "homepage": "https://github.com/gxcsoccer/sofa-mosn-demo#readme",
+  "dependencies": {
+    "egg": "^2.10.0",
+    "egg-mosn": "^0.0.1",
+    "egg-scripts": "^2.7.0",
+    "egg-sofa-rpc": "^1.0.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.8.1",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.19.2",
+    "egg-rpc-generator": "^1.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-egg": "^7.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
